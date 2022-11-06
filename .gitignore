@@ -1,3 +1,5 @@
 mfig.egg-info
 build
 *.pdf
+*.eps
+dist

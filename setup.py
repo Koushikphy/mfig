@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-with open('Readme.md') as f:
+with open('./Readme.md') as f:
     txt = f.read()
 
 setup(name='mfig',
@@ -19,7 +19,7 @@ setup(name='mfig',
           'Programming Language :: Python :: Implementation :: CPython',
           'Topic :: System :: Shells'
       ],
-      keywords='File Operations',
+      keywords='Imgae merging',
       project_urls={'Source Code': 'https://github.com/Koushikphy/kutils'},
       zip_safe=True,
       python_requires='>=2.7',
