@@ -5,7 +5,7 @@ with open('./Readme.md') as f:
 
 setup(name='mfig',
       version='0.1.0',
-      description='A common file operation utility',
+      description='A tool for merging multiple figures into one',
       long_description=txt,
       author='Koushik Naskar',
       author_email='koushik.naskar9@gmail.com',
@@ -20,7 +20,7 @@ setup(name='mfig',
           'Topic :: System :: Shells'
       ],
       keywords='Imgae merging',
-      project_urls={'Source Code': 'https://github.com/Koushikphy/kutils'},
+      project_urls={'Source Code': 'https://github.com/Koushikphy/mfig'},
       zip_safe=True,
       python_requires='>=2.7',
       packages=find_packages(),

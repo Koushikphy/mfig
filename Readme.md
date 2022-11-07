@@ -1,4 +1,4 @@
-## 
+## `mfig`: A tool for merging multiple figures into one
 
 
 1. __Installation__  

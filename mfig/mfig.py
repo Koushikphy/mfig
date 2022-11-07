@@ -21,7 +21,7 @@ class CustomParser(argparse.ArgumentParser):
 def createParser():
     #main parser
     parser = CustomParser(prog="onefig",formatter_class=argparse.RawTextHelpFormatter,
-                          description="A tool merging multiple figure in one.")
+                          description="A tool for merging multiple figures into one.")
 
     #adding options for numerical jobs
     parser.add_argument("--ifile",'-i',nargs='+',type=str,help="Input files",metavar="FILE",required=True)
