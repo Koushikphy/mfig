@@ -26,10 +26,11 @@ def createParser():
     #adding options for numerical jobs
     parser.add_argument("--ifile",'-i',nargs='+',type=str,help="Input files",metavar="FILE",required=True)
     parser.add_argument('--ofile','-o',type=str,required=True,help="Output file name",metavar="FILE")
-    parser.add_argument('--per_row','-pr',help="Number of figure in one row (default: %(default)s)",metavar='IR',default=2,type=int)
+    parser.add_argument('--per_row','-pr',help="Number of figure in one row (default: %(default)s)",metavar='PR',default=2,type=int)
     parser.add_argument('--index-type','-it',nargs='?',choices=['b','t','n'],default='b',help="Where to put the caption (default: %(default)s)",metavar='IT')
     parser.add_argument('--width','-w',help="Width of each figure (default: %(default)s)",default=0.46,metavar='WIDTH',type=float)
-    parser.add_argument('--vspace','-v',help="Verticle space between rows in cm (default: %(default)s)",default=0.3,metavar='WIDTH',type=float)
+    parser.add_argument('--vspace','-v',help="Verticle space between rows in cm (default: %(default)s)",default=0.3,metavar='VSPACE',type=float)
+    parser.add_argument('--rotate','-r',help="Rotate figure (default: %(default)s)",default=0,metavar='ROTATE',type=float)
 
     return parser.parse_args()
 
@@ -76,7 +77,7 @@ def createTeX(args):
     assert (1.0/inOneRow)>args.width, "Width {} is too large to fit {} figure in one row".format(args.width,inOneRow)
 
     for ind,elem in enumerate(args.ifile,start=1):
-        fig += thisFig+r'{\includegraphics[width=\imsize]{'+elem+'}}'
+        fig += thisFig+r'{\includegraphics[width=\imsize,angle='+str(args.rotate)+']{'+elem+'}}'
         fig += r'\\\vspace{'+str(args.vspace)+'cm}' if not ind%inOneRow else r"\hfill"
         fig +='\n'
     

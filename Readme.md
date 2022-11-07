@@ -19,3 +19,4 @@ Run the installed `mfig` utility to use this tool. Description of different argu
 |    `-ir`    | Number of figures in one row |
 |    `-w`     | Width of each figures. |
 |    `-v`     | Verticle space between each rows |
+|    `-r`     | Rotate each figure by this angle |
