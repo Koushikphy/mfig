@@ -25,14 +25,13 @@ def createParser():
                           description="A tool for merging multiple figures into one.")
 
     #adding options for numerical jobs
-    parser.add_argument("--ifile",'-i',nargs='+',type=str,help="Input files",metavar="FILE",required=True)
-    parser.add_argument('--ofile','-o',type=str,required=True,help="Output file name",metavar="FILE")
-    parser.add_argument('--per_row','-pr',help="Number of figure in one row (default: %(default)s)",metavar='PR',default=2,type=int)
-    parser.add_argument('--index-type','-it',nargs='?',choices=['b','t','n','i'],default='b',help="Where to put the caption. Available options: i, b, t, n. (default: %(default)s)",metavar='IT')
-    parser.add_argument('--width','-w',help="Width of each figure (default: %(default)s)",default=0.46,metavar='WIDTH',type=float)
-    parser.add_argument('--vspace','-v',help="Verticle space between rows in cm (default: %(default)s)",default=0.3,metavar='VSPACE',type=float)
-    parser.add_argument("--shift",'-s',nargs='+',type=str,help="Shift as (x,y) coordinate. Can be used only with inner index position",metavar="SHIFT",default=['0.1', '0.1'])
-
+    parser.add_argument('-i',nargs='+',type=str,help="List of input files",metavar="FILE",required=True)
+    parser.add_argument('-o',type=str,required=True,help="Output file name",metavar="FILE")
+    parser.add_argument('-pr',help="Number of figure in one row (default: %(default)s)",metavar='PR',default=2,type=int)
+    parser.add_argument('-it',nargs='?',choices=['b','t','n','i'],default='b',help="Where to put the caption. Available options: i, b, t, n. (default: %(default)s)",metavar='IT')
+    parser.add_argument('-w',help="Width of each figure (default: %(default)s)",default=0.46,metavar='WIDTH',type=float)
+    parser.add_argument('-v',help="Verticle space between rows in cm (default: %(default)s)",default=0.3,metavar='VSPACE',type=float)
+    parser.add_argument('-s',nargs='+',type=str,help="Shift as (x,y) coordinate. Can be used only with inner index position",metavar="SHIFT",default=['0.1', '0.1'])
     # parser.add_argument('--rotate','-r',help="Rotate figure (default: %(default)s)",default=0,metavar='ROTATE',type=float)
 
     return parser.parse_args()
@@ -47,7 +46,7 @@ def createPdf(args):
     destDir = 'tmp_pdfmerger'
     os.makedirs(destDir,exist_ok=True)
 
-    for file in args.ifile:
+    for file in args.i:
         shutil.copy(file, destDir)
 
     os.chdir(destDir)
@@ -59,7 +58,7 @@ def createPdf(args):
         with open('tmp.log','a') as f:
             ret = run(['pdflatex','test.tex'],stdout=f,stderr=STDOUT,timeout=5)
             if ret:
-                run(['pdfcrop','test.pdf','../{}'.format(args.ofile)],stdout=f)
+                run(['pdfcrop','test.pdf','../{}'.format(args.o)],stdout=f)
             else:
                 raise
     except:    
@@ -158,12 +157,11 @@ def createOuterIndex(iFiles,iRow,iType,vSpace,width):
 
 
 def createTeX(args):
-
-    inOneRow=args.per_row
-    width = args.width
-    ifile = args.ifile
-    iType = args.index_type
-    shift = args.shift
+    inOneRow=args.pr
+    width = args.w
+    ifile = args.i
+    iType = args.it
+    shift = args.s
     assert len(shift)==2, "A pair of x,y coordinate is required"
 
     assert (1.0/inOneRow)>width, "Width {} is too large to fit {} figure in one row".format(width,inOneRow)
@@ -171,9 +169,9 @@ def createTeX(args):
     width = str(width)
 
     if iType=='i':
-        return createInnerIndex(ifile,inOneRow,width,args.shift)
+        return createInnerIndex(ifile,inOneRow,width,shift)
     else:
-        return createOuterIndex(ifile,inOneRow,iType,str(args.vspace),width)
+        return createOuterIndex(ifile,inOneRow,iType,str(args.v),width)
 
 
 
