@@ -15,8 +15,8 @@ Run the installed `mfig` utility to use this tool. Description of different argu
 | ----------- | ----------- 
 |    `-i`     | List of input figures |
 |    `-o`     | Output file name  | 
-|    `-it`    | Position of the subfigure index, possible values are: <br> `b` (bottom), `t` (top-right corner), `n` (no index) |
+|    `-it`    | Position of the subfigure index, possible values are: <br> `i` (inner), <br>`b` (bottom), <br>`t` (top-right corner),<br> `n` (no index) |
 |    `-ir`    | Number of figures in one row |
 |    `-w`     | Width of each figures. |
 |    `-v`     | Verticle space between each rows |
-|    `-r`     | Rotate each figure by this angle |
+|    `-s`     | Shift as x,y coordinate in position <br> for inner index type option |

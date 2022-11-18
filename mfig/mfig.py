@@ -28,10 +28,10 @@ def createParser():
     parser.add_argument("--ifile",'-i',nargs='+',type=str,help="Input files",metavar="FILE",required=True)
     parser.add_argument('--ofile','-o',type=str,required=True,help="Output file name",metavar="FILE")
     parser.add_argument('--per_row','-pr',help="Number of figure in one row (default: %(default)s)",metavar='PR',default=2,type=int)
-    parser.add_argument('--index-type','-it',nargs='?',choices=['b','t','n','i'],default='b',help="Where to put the caption (default: %(default)s)",metavar='IT')
+    parser.add_argument('--index-type','-it',nargs='?',choices=['b','t','n','i'],default='b',help="Where to put the caption. Available options: i, b, t, n. (default: %(default)s)",metavar='IT')
     parser.add_argument('--width','-w',help="Width of each figure (default: %(default)s)",default=0.46,metavar='WIDTH',type=float)
     parser.add_argument('--vspace','-v',help="Verticle space between rows in cm (default: %(default)s)",default=0.3,metavar='VSPACE',type=float)
-    parser.add_argument("--shift",'-s',nargs='+',type=str,help="Shift as (x,y) coordinate",metavar="SHIFT",default=['0.1', '0.1'])
+    parser.add_argument("--shift",'-s',nargs='+',type=str,help="Shift as (x,y) coordinate. Can be used only with inner index position",metavar="SHIFT",default=['0.1', '0.1'])
 
     # parser.add_argument('--rotate','-r',help="Rotate figure (default: %(default)s)",default=0,metavar='ROTATE',type=float)
 
