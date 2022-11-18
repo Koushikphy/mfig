@@ -4,7 +4,7 @@
 1. __Installation__  
 Download and install the package from the latest [release section](https://github.com/Koushikphy/mfig/releases/latest) or directly install it using 
 ```
-pip install https://github.com/Koushikphy/mfig/releases/download/0.1.0/mfig-0.1.0.tar.gz
+pip install https://github.com/Koushikphy/mfig/releases/download/0.2.0/mfig-0.2.0.tar.gz
 ```
 
 1. __Usage__  
