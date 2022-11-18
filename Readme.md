@@ -8,7 +8,7 @@ pip install https://github.com/Koushikphy/mfig/releases/download/0.2.0/mfig-0.2.
 ```
 
 1. __Usage__  
-Run the installed `mfig` utility to use this tool. Description of different arguments, can also be checked with `mfig -h` option. Check the [example section](example/Readme.md) for details us
+Run the installed `mfig` utility to use this tool. Description of different arguments, can also be checked with `mfig -h` option. Check the [example section](example/Readme.md) for details usage.
 
 
 | Argument    |  Description|
