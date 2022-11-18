@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from subprocess import call
+from subprocess import call,STDOUT,check_output,run
 import shutil,os,argparse,sys
 import string
 
@@ -31,7 +31,7 @@ def createParser():
     parser.add_argument('--index-type','-it',nargs='?',choices=['b','t','n','i'],default='b',help="Where to put the caption (default: %(default)s)",metavar='IT')
     parser.add_argument('--width','-w',help="Width of each figure (default: %(default)s)",default=0.46,metavar='WIDTH',type=float)
     parser.add_argument('--vspace','-v',help="Verticle space between rows in cm (default: %(default)s)",default=0.3,metavar='VSPACE',type=float)
-    parser.add_argument("--shift",'-s',nargs='+',type=str,help="Shift as (x,y) coordinate (default: %(default)s)",metavar="SHIFT",default="0.5,0.5")
+    parser.add_argument("--shift",'-s',nargs='+',type=str,help="Shift as (x,y) coordinate",metavar="SHIFT",default=['0.1', '0.1'])
 
     # parser.add_argument('--rotate','-r',help="Rotate figure (default: %(default)s)",default=0,metavar='ROTATE',type=float)
 
@@ -52,18 +52,21 @@ def createPdf(args):
 
     os.chdir(destDir)
     tex = createTeX(args)
-    # print(tex)
     with open('test.tex','w') as f:
-
         f.write(tex)
 
-    with open('tmp.log','a') as f:
-        ret = call(['pdflatex','test.tex'],stdout=f)
-
-        call(['pdfcrop','test.pdf','../{}'.format(args.ofile)],stdout=f)
-
-    os.chdir('../')
-    shutil.rmtree(destDir)
+    try:
+        with open('tmp.log','a') as f:
+            ret = run(['pdflatex','test.tex'],stdout=f,stderr=STDOUT,timeout=5)
+            if ret:
+                run(['pdfcrop','test.pdf','../{}'.format(args.ofile)],stdout=f)
+            else:
+                raise
+    except:    
+        print("Something went wrong. Coundn't merge the figures.")
+    finally:
+        os.chdir('../')
+        shutil.rmtree(destDir)
 
 
 
