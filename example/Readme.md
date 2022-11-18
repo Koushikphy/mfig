@@ -1,6 +1,6 @@
 
 
-#### `mfig` Examples:
+## `mfig` Examples:
 
 - 2 images with index inside
 ```bash

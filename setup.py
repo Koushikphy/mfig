@@ -4,7 +4,7 @@ with open('./Readme.md') as f:
     txt = f.read()
 
 setup(name='mfig',
-      version='0.1.0',
+      version='0.2.0',
       description='A tool for merging multiple figures into one',
       long_description=txt,
       author='Koushik Naskar',
@@ -22,7 +22,7 @@ setup(name='mfig',
       keywords='Imgae merging',
       project_urls={'Source Code': 'https://github.com/Koushikphy/mfig'},
       zip_safe=True,
-      python_requires='>=2.7',
+      python_requires='>=3.5',
       packages=find_packages(),
       entry_points={
           'console_scripts': [
