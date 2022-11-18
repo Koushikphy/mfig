@@ -89,8 +89,6 @@ def createInnerIndex(ifiles,iRow,width,shift):
     \documentclass[a4,12pt]{article}
     \usepackage{graphicx}
     \usepackage{subfig}
-    \usepackage{hyperref}
-    \usepackage{color}
     \usepackage{tikz}
     \thispagestyle{empty}
 
