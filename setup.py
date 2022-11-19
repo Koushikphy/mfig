@@ -4,9 +4,10 @@ with open('./Readme.md') as f:
     txt = f.read()
 
 setup(name='mfig',
-      version='0.2.0',
+      version='0.2.1',
       description='A tool for merging multiple figures into one',
       long_description=txt,
+      long_description_content_type='text/markdown',
       author='Koushik Naskar',
       author_email='koushik.naskar9@gmail.com',
       license="MIT",

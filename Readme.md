@@ -2,9 +2,9 @@
 
 
 ### Installation 
-Download and install the latest package from the [release section](https://github.com/Koushikphy/mfig/releases/latest) or directly install it using 
+Download and install the latest package from the [release section](https://github.com/Koushikphy/mfig/releases/latest) or directly by pip
 ```
-pip install https://github.com/Koushikphy/mfig/releases/download/0.2.0/mfig-0.2.0.tar.gz
+pip install mfig
 ```
 
 __Prerequisite__  
