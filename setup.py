@@ -20,7 +20,7 @@ setup(name='mfig',
           'Programming Language :: Python :: Implementation :: CPython',
           'Topic :: System :: Shells'
       ],
-      keywords='Imgae merging',
+      keywords='Image merging',
       project_urls={'Source Code': 'https://github.com/Koushikphy/mfig'},
       zip_safe=True,
       python_requires='>=3.5',
