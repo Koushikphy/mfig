@@ -56,13 +56,15 @@ def createPdf(args):
 
     try:
         with open('tmp.log','a') as f:
-            ret = run(['pdflatex','test.tex'],stdout=f,stderr=STDOUT,timeout=5)
-            if ret:
-                run(['pdfcrop','test.pdf','../{}'.format(args.o)],stdout=f)
-            else:
-                raise
-    except:    
-        print("Something went wrong. Coundn't merge the figures.")
+            ret = run(['pdflatex', '-halt-on-error', '-interaction=nonstopmode','test.tex'],stdout=f,stderr=STDOUT,timeout=5)
+            if ret !=0:
+                raise Exception("Failed to compile pdf. Make sure all the packages are properly installed")
+
+            ret = run(['pdfcrop','test.pdf','../{}'.format(args.o)],stdout=f,stderr=STDOUT,timeout=9)
+            if ret !=0:
+                raise Exception("Failed to crop pdf. Make sure 'pdfcrop' is installed")
+    except :    
+        raise
     finally:
         os.chdir('../')
         shutil.rmtree(destDir)
