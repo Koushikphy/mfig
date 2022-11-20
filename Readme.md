@@ -24,5 +24,5 @@ Run the installed `mfig` utility to use this tool. Description of different argu
 |    `-it`    | Position of the subfigure index, possible values are: <br> `i` (inner), <br>`b` (bottom), <br>`t` (top-right corner),<br> `n` (no index) |
 |    `-ir`    | Number of figures in one row |
 |    `-w`     | Width of each figures. |
-|    `-v`     | Verticle space between each rows |
+|    `-v`     | Vertical space between each rows |
 |    `-s`     | Shift as x,y coordinate in position <br> for inner index type option |
