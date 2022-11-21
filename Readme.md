@@ -1,25 +1,29 @@
 ## `mfig`: A tool for merging multiple figures into one
-[![Alt text](https://img.shields.io/pypi/v/kfutils.svg)](https://pypi.org/project/kfutils/)
-[![Alt text](https://img.shields.io/pypi/pyversions/kfutils.svg)](https://pypi.org/project/kfutils/)
-[![Alt text](https://img.shields.io/pypi/dw/kfutils.svg)](https://pypi.org/project/kfutils/)
-[![Alt text](https://img.shields.io/pypi/l/kfutils.svg)](https://pypi.org/project/kfutils/)
-[![Alt text](https://img.shields.io/pypi/status/kfutils.svg)](https://pypi.org/project/kfutils/)
+[![Alt text](https://img.shields.io/pypi/v/mfig.svg?style=for-the-badge&logo=pypi)](https://pypi.org/project/mfig/)
+[![Alt text](https://img.shields.io/pypi/pyversions/mfig.svg?style=for-the-badge&logo=python)](https://pypi.org/project/mfig/)
+[![Alt text](https://img.shields.io/pypi/dm/mfig.svg?style=for-the-badge)](https://pypi.org/project/mfig/)
+[![Alt text](https://img.shields.io/pypi/l/mfig.svg?style=for-the-badge)](https://pypi.org/project/mfig/)
+[![Alt text](https://img.shields.io/pypi/status/mfig.svg?style=for-the-badge)](https://pypi.org/project/mfig/)
 
 
-### Installation 
+
+
+### ⚒ Installation 
 Download and install the latest package from the [release section](https://github.com/Koushikphy/mfig/releases/latest) or directly by pip
 ```
 pip install mfig
 ```
 
-__Prerequisite__  
+__✔ Prerequisite__  
 1. Working LaTeX environment with `pdflatex` and necessary packages. Install `texlive-latex-extra`.
 2. `pdfcrop`. Install `texlive-extra-utils`.
 
 
 
-### Usage
-Run the installed `mfig` utility to use this tool. Description of different arguments, can also be checked with `mfig -h` option. Check the [example section](example/Readme.md) for details usage.
+### ⚡Usage
+Run the installed `mfig` utility to use this tool. Description of different arguments, can also be checked with `mfig -h` option. 
+
+🚀 Check the [example section](example/Readme.md) for details usage.
 
 
 | Argument    |  Description|
