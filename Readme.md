@@ -1,5 +1,10 @@
 ## `mfig`: A tool for merging multiple figures into one
-[![PyPI version](https://badge.fury.io/py/mfig.svg)](https://badge.fury.io/py/mfig)
+[![Alt text](https://img.shields.io/pypi/v/kfutils.svg)](https://pypi.org/project/kfutils/)
+[![Alt text](https://img.shields.io/pypi/pyversions/kfutils.svg)](https://pypi.org/project/kfutils/)
+[![Alt text](https://img.shields.io/pypi/dw/kfutils.svg)](https://pypi.org/project/kfutils/)
+[![Alt text](https://img.shields.io/pypi/l/kfutils.svg)](https://pypi.org/project/kfutils/)
+[![Alt text](https://img.shields.io/pypi/status/kfutils.svg)](https://pypi.org/project/kfutils/)
+
 
 ### Installation 
 Download and install the latest package from the [release section](https://github.com/Koushikphy/mfig/releases/latest) or directly by pip
