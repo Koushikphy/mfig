@@ -1,9 +1,12 @@
 ## `mfig`: A tool for merging multiple figures into one
-[![Alt text](https://img.shields.io/pypi/v/mfig.svg?style=for-the-badge&logo=pypi)](https://pypi.org/project/mfig/)
-[![Alt text](https://img.shields.io/pypi/pyversions/mfig.svg?style=for-the-badge&logo=python)](https://pypi.org/project/mfig/)
-[![Alt text](https://img.shields.io/pypi/dm/mfig.svg?style=for-the-badge)](https://pypi.org/project/mfig/)
-[![Alt text](https://img.shields.io/pypi/l/mfig.svg?style=for-the-badge)](https://pypi.org/project/mfig/)
-[![Alt text](https://img.shields.io/pypi/status/mfig.svg?style=for-the-badge)](https://pypi.org/project/mfig/)
+[![Alt text](https://img.shields.io/pypi/v/mfig.svg?logo=pypi)](https://pypi.org/project/mfig/)
+[![Alt text](https://img.shields.io/pypi/pyversions/mfig.svg?logo=python)](https://pypi.org/project/mfig/)
+[![Alt text](https://img.shields.io/pypi/dm/mfig.svg)](https://pypi.org/project/mfig/)
+[![Alt text](https://img.shields.io/pypi/l/mfig.svg)](https://pypi.org/project/mfig/)
+[![Alt text](https://img.shields.io/pypi/status/mfig.svg)](https://pypi.org/project/mfig/)
+
+
+
 
 
 
