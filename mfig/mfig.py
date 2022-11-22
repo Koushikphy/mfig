@@ -3,7 +3,8 @@
 from subprocess import call,STDOUT,check_output,run
 import shutil,os,argparse,sys
 import string
-
+import pkg_resources
+version= pkg_resources.require('mfig')[0].version
 
 # How it works:
 # 1. Create a tex document with necessary configurations
@@ -22,7 +23,9 @@ class CustomParser(argparse.ArgumentParser):
 def createParser():
     #main parser
     parser = CustomParser(prog="onefig",formatter_class=argparse.RawTextHelpFormatter,
-                          description="A tool for merging multiple figures into one.")
+                          description="A tool for merging multiple figures into one.",
+                          epilog="Version: {}\nCreated by Koushik Naskar (koushik.naskar9@gmail.com)".format(version)
+                          )
 
     #adding options for numerical jobs
     parser.add_argument('-i',nargs='+',type=str,help="List of input files",metavar="FILE",required=True)
