@@ -4,7 +4,7 @@ with open('./Readme.md') as f:
     txt = f.read()
 
 setup(name='mfig',
-      version='0.2.4',
+      version='0.2.5',
       description='A tool for merging multiple figures into one',
       long_description=txt,
       long_description_content_type='text/markdown',
